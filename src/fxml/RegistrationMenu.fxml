@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="700.0" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nordicguide.RegisterController">
+   <children>
+       <Text fill="WHITE" layoutX="151.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nordic Guide">
+         <font>
+             <Font name="Quicksand-Regular" size="60.0"/>
+         </font>
+         <effect>
+             <DropShadow/>
+         </effect>
+      </Text>
+       <Text fx:id="textRegistration" fill="WHITE" layoutX="250.0" layoutY="112.0" strokeType="OUTSIDE"
+             strokeWidth="0.0" text="Registration">
+         <font>
+             <Font name="Quicksand-Regular" size="30.0"/>
+         </font>
+         <effect>
+             <DropShadow/>
+         </effect>
+      </Text>
+       <CheckBox fx:id="checkBoxIfCompany" layoutX="443.0" layoutY="150.0" mnemonicParsing="false"
+                 onAction="#handleCheckBox" text="Company registration" textFill="WHITE">
+         <font>
+             <Font name="Quicksand-Regular" size="14.0"/>
+         </font>
+       </CheckBox>
+       <Text fill="WHITE" layoutX="61.0" layoutY="204.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="*Username:">
+         <font>
+             <Font name="Quicksand-Regular" size="16.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="121.0" layoutY="389.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="Address:">
+         <font>
+             <Font name="Quicksand-Regular" size="16.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="121.0" layoutY="336.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="Phonenumber:">
+         <font>
+             <Font name="Quicksand-Regular" size="16.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="375.0" layoutY="337.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="*E-mail:">
+         <font>
+             <Font name="Quicksand-Regular" size="16.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="61.0" layoutY="265.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="*CivicNumber:">
+         <font>
+             <Font name="Quicksand-Regular" size="16.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="443.0" layoutY="205.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="*Company name:">
+         <font>
+             <Font name="Quicksand-Regular" size="16.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="443.0" layoutY="265.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="*OCR-Number:">
+         <font>
+             <Font name="Quicksand-Regular" size="16.0"/>
+         </font>
+      </Text>
+       <TextField fx:id="textFieldName" alignment="CENTER" layoutX="60.0" layoutY="208.0" prefHeight="25.0"
+                  prefWidth="190.0" promptText="Enter your Name ">
+         <font>
+             <Font name="Quicksand-Regular" size="13.0"/>
+         </font>
+       </TextField>
+       <TextField fx:id="textFieldCivic" alignment="CENTER" layoutX="60.0" layoutY="270.0" prefHeight="25.0"
+                  prefWidth="190.0" promptText="Enter your Civicnumber"/>
+       <TextField fx:id="textFieldPhone" alignment="CENTER" layoutX="121.0" layoutY="341.0" prefHeight="25.0"
+                  prefWidth="190.0" promptText="Enter your Phonenumber"/>
+       <TextField fx:id="textFieldAddress" alignment="CENTER" layoutX="121.0" layoutY="393.0" prefHeight="25.0"
+                  prefWidth="190.0" promptText="Enter your Address"/>
+       <TextField fx:id="textFieldEmail" alignment="CENTER" layoutX="374.0" layoutY="341.0" prefHeight="25.0"
+                  prefWidth="190.0" promptText="Enter your E-mail"/>
+       <TextField fx:id="textFieldPassword" alignment="CENTER" layoutX="374.0" layoutY="393.0" prefHeight="25.0"
+                  prefWidth="190.0" promptText="Select Password"/>
+       <TextField fx:id="textFieldCompanyName" alignment="CENTER" layoutX="443.0" layoutY="209.0" prefHeight="25.0"
+                  prefWidth="190.0" promptText="Enter Company name"/>
+       <TextField fx:id="textFieldOCR" alignment="CENTER" layoutX="443.0" layoutY="270.0" prefHeight="25.0"
+                  prefWidth="190.0" promptText="Enter Company OCR-number"/>
+       <Text fill="WHITE" layoutX="374.0" layoutY="389.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="*Password:">
+           <font>
+               <Font name="Quicksand-Regular" size="16.0"/>
+         </font>
+      </Text>
+       <Button layoutX="274.0" layoutY="449.0" mnemonicParsing="false" onMousePressed="#register" prefHeight="53.0"
+               prefWidth="153.0" style="-fx-background-radius: 40; -fx-border-radius: 40;"
+               stylesheets="@../css/ButtonDesign.css" text="Register">
+         <font>
+            <Font name="Niagara Solid" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect></Button>
+       <Button fx:id="backBtn" layoutX="9.0" layoutY="448.0" mnemonicParsing="false" onMouseClicked="#goBack"
+               prefHeight="53.0" prefWidth="153.0" style="-fx-background-radius: 40; -fx-border-radius: 40;"
+               stylesheets="@../css/ButtonDesign.css" text="Back">
+         <font>
+            <Font name="Niagara Solid" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+       <Button fx:id="helpBtn" layoutX="566.0" layoutY="452.0" mnemonicParsing="false" onAction="#handleHelpButton"
+               prefHeight="46.0" prefWidth="120.0" style="-fx-background-radius: 40; -fx-border-radius: 40;"
+               stylesheets="@../css/ButtonDesign.css" text="Help">
+         <font>
+            <Font name="Niagara Solid" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPaneMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="700.0" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nordicguide.StartPageController">
+   <children>
+       <Text fill="WHITE" layoutX="155.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nordic Guide" textAlignment="CENTER">
+         <font>
+             <Font name="Quicksand-Regular" size="60.0" />
+         </font>
+         <effect>
+             <DropShadow />
+         </effect>
+      </Text>
+       <Button fx:id="logInButton" layoutX="260.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#switchToLoginScene" prefHeight="53.0" prefWidth="152.0" style="-fx-background-radius: 40; -fx-border-radius: 40;" stylesheets="@../css/ButtonDesign.css" text="Login">
+         <font>
+             <Font name="Quicksand-Regular" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+       <Button fx:id="registerButton" layoutX="264.0" layoutY="242.0" mnemonicParsing="false" onMouseClicked="#switchToRegistrationScene" prefHeight="53.0" prefWidth="152.0" style="-fx-background-radius: 40; -fx-border-radius: 40;" stylesheets="@../css/ButtonDesign.css" text="Register">
+         <font>
+             <Font name="Quicksand-Regular" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+       <Button fx:id="guestButton" layoutX="191.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#switchToMainPageScene" prefHeight="53.0" prefWidth="298.0" style="-fx-background-radius: 40; -fx-border-radius: 40;" stylesheets="@../css/ButtonDesign.css" text="Guest">
+         <font>
+             <Font name="Quicksand-Regular" size="30.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

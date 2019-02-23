@@ -1,0 +1,21 @@
+.list-cell{
+-fx-text-fill: black;
+-fx-background-color: transparent;
+}
+
+.list-cell:hover{
+-fx-font-weight: bold;
+}
+
+.list-cell:selected{
+-fx-font-weight: bold;
+}
+
+.list-view{
+-fx-background-radius: 10;
+-fx-border-radius: 10;
+}
+
+
+
+

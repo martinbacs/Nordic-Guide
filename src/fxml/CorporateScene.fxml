@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPaneCorporateScene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="515.0" prefWidth="700.0" style="-fx-background-radius: 40; -fx-border-radius: 40;" stylesheets="@../css/Design.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nordicguide.CorporateController">
+   <children>
+      <TextField fx:id="textFieldName" alignment="CENTER" layoutX="166.0" layoutY="216.0" prefHeight="25.0" prefWidth="190.0">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TextField>
+      <TextField fx:id="textFieldAddress" alignment="CENTER" layoutX="166.0" layoutY="259.0" prefHeight="25.0" prefWidth="190.0">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TextField>
+      <TextField fx:id="textFieldPhone" alignment="CENTER" layoutX="166.0" layoutY="301.0" prefHeight="25.0" prefWidth="190.0">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TextField>
+      <TextField fx:id="textFieldEmail" alignment="CENTER" layoutX="166.0" layoutY="344.0" prefHeight="25.0" prefWidth="190.0">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TextField>
+      <TextField fx:id="textFieldWebb" alignment="CENTER" layoutX="166.0" layoutY="386.0" prefHeight="25.0" prefWidth="190.0">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TextField>
+       <Text fill="WHITE" layoutX="14.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company name:">
+         <font>
+             <Font name="Quicksand-Regular" size="18.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="86.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+             <Font name="Quicksand-Regular" size="18.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="33.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phonenumber:">
+         <font>
+             <Font name="Quicksand-Regular" size="18.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="101.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail:">
+         <font>
+             <Font name="Quicksand-Regular" size="18.0"/>
+         </font>
+      </Text>
+       <Text fill="WHITE" layoutX="84.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Website:">
+         <font>
+             <Font name="Quicksand-Regular" size="18.0"/>
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="431.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company location:">
+         <font>
+             <Font name="Quicksand-Regular" size="20.0"/>
+         </font>
+      </Text>
+      <RadioButton fx:id="radioButtonDk" layoutX="431.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#radioButtonSelection" text="Denmark" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="radioButtonGroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radioButtonSe" layoutX="518.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#radioButtonSelection" text="Sweden" textFill="WHITE" toggleGroup="$radioButtonGroup" />
+      <RadioButton fx:id="radioButtonNo" layoutX="594.0" layoutY="254.0" mnemonicParsing="false" onMouseClicked="#radioButtonSelection" text="Norway" textFill="WHITE" toggleGroup="$radioButtonGroup" />
+      <RadioButton fx:id="radioButtonIs" layoutX="432.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#radioButtonSelection" text="Iceland" textFill="WHITE" toggleGroup="$radioButtonGroup" />
+      <RadioButton fx:id="radioButtonFi" layoutX="518.0" layoutY="281.0" mnemonicParsing="false" onMouseClicked="#radioButtonSelection" text="Finland" textFill="WHITE" toggleGroup="$radioButtonGroup" />
+       <Text fill="WHITE" layoutX="223.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0"
+             text="Submit your company">
+         <font>
+             <Font name="Quicksand-Regular" size="25.0"/>
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+       <ComboBox fx:id="comboBoxCities" layoutX="432.0" layoutY="318.0" prefWidth="150.0" promptText="Choose city:">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </ComboBox>
+       <Button fx:id="addAttractionButton" alignment="CENTER" layoutX="228.0" layoutY="455.0" mnemonicParsing="false"
+               onMouseClicked="#addCompany" prefHeight="37.0" prefWidth="267.0"
+               style="-fx-background-radius: 40; -fx-border-radius: 40;" stylesheets="@../css/ButtonDesign.css"
+               text="Submit Company">
+         <font>
+            <Font name="Niagara Solid" size="28.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+      <RadioButton fx:id="radioButtonRestaurant" layoutX="432.0" layoutY="403.0" mnemonicParsing="false" text="Restaurant" textFill="WHITE">
+         <toggleGroup>
+            <ToggleGroup fx:id="CompanyType" />
+         </toggleGroup>
+      </RadioButton>
+       <RadioButton fx:id="radioButtonHotel" layoutX="519.0" layoutY="403.0" mnemonicParsing="false" text="Hotel"
+                    textFill="WHITE" toggleGroup="$CompanyType"/>
+       <RadioButton fx:id="radioButtonMuseum" layoutX="578.0" layoutY="403.0" mnemonicParsing="false" text="Museum"
+                    textFill="WHITE" toggleGroup="$CompanyType"/>
+      <Text fill="WHITE" layoutX="431.0" layoutY="384.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company orientation:">
+         <font>
+             <Font name="Quicksand-Regular" size="20.0"/>
+         </font>
+      </Text>
+       <Button fx:id="deleteAccountButton" layoutX="473.0" layoutY="8.0" mnemonicParsing="false"
+               onMouseClicked="#deleteAccount" prefHeight="37.0" prefWidth="233.0"
+               style="-fx-background-radius: 40; -fx-background-radius: 40;" stylesheets="@../css/ButtonDesign.css"
+               text="Close account">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+       <Button fx:id="returnButton" layoutX="15.0" layoutY="455.0" mnemonicParsing="false" onMouseClicked="#goBack"
+               prefHeight="46.0" prefWidth="116.0" style="-fx-background-radius: 40; -fx-border-radius: 40;"
+               stylesheets="@../css/ButtonDesign.css" text="Back">
+         <font>
+            <Font name="Niagara Solid" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+       <Button fx:id="helpButton" layoutX="565.0" layoutY="455.0" mnemonicParsing="false" onAction="#handleHelpButton"
+               prefHeight="46.0" prefWidth="120.0" style="-fx-background-radius: 40; -fx-border-radius: 40;"
+               stylesheets="@../css/ButtonDesign.css" text="Help">
+         <font>
+            <Font name="Niagara Solid" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </Button>
+       <Text fill="WHITE" layoutX="155.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nordic Guide">
+           <font>
+               <Font name="Quicksand-Regular" size="60.0"/>
+           </font>
+           <effect>
+               <DropShadow/>
+           </effect>
+       </Text>
+   </children>
+   <effect>
+      <DropShadow color="WHITE" />
+   </effect>
+</AnchorPane>
